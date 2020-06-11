@@ -1,0 +1,19 @@
+name: Deploy Theme
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm install
+        working-directory: ./src
+      - name: Build and deploy the theme
+        working-directory: ./src
+        run: npm run deploy
+        env:
+          GHOST_ADMIN_API_URL: ${{ https://josvisserict.nl }}
+          GHOST_ADMIN_API_KEY: ${{ 5e8a134c683a2c00010acdf0:946795fc3e118f0bd543f8c09e52d2da9175d6987efa2a73eef053be91f1b8ab }}
