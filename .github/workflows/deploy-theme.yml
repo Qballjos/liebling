@@ -15,5 +15,5 @@ jobs:
         working-directory: ./src
         run: npm run deploy
         env:
-          GHOST_ADMIN_API_URL: ${{ https://josvisserict.nl }}
-          GHOST_ADMIN_API_KEY: ${{ 5e8a134c683a2c00010acdf0:946795fc3e118f0bd543f8c09e52d2da9175d6987efa2a73eef053be91f1b8ab }}
+          GHOST_ADMIN_API_URL: ${{https://josvisserict.nl}}
+          GHOST_ADMIN_API_KEY: ${{5e8a134c683a2c00010acdf0:946795fc3e118f0bd543f8c09e52d2da9175d6987efa2a73eef053be91f1b8ab}}
