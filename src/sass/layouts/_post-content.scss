@@ -101,6 +101,11 @@
   a {
     color: var(--primary-foreground-color);
     text-decoration: underline;
+    @include transition(color linear 0.2s);
+
+    &:hover {
+      color: var(--link-color);
+    }
   }
 
   ul, ol {
@@ -117,10 +122,10 @@
       padding-left: 40px;
       margin-bottom: 30px;
     }
+  }
 
-    li {
-      margin-bottom: 20px;
-    }
+  li {
+    margin-bottom: 20px;
   }
 
   img,
@@ -494,7 +499,7 @@
     flex-wrap: wrap;
     font-size: 0.9rem;
     font-weight: 400;
-    color: $gray;
+    color: var(--titles-color);
     margin-top: 14px;
   }
 
