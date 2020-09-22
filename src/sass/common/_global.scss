@@ -54,37 +54,14 @@ fieldset {
   background-color: var(--background-color) !important;
 }
 
+.medium-zoom-image-mobile {
+  left: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  @include transition(all .3s cubic-bezier(.2,0,.2,1) !important);
+}
+
 .medium-zoom-overlay,
 .medium-zoom-image {
   z-index: 5;
-}
-
-div.lozad.loaded:not(.no-fade-animation),
-img.lozad.loaded {
-  opacity: 0;
-  @include animation('fadeIn 0.5s forwards');
-  @include keyframes(fadeIn) {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
-::-webkit-input-placeholder {
-  color: $gray;
-}
-
-::-moz-placeholder {
-  color: $gray;
-}
-
-:-ms-input-placeholder {
-  color: $gray;
-}
-
-:-moz-placeholder {
-  color: $gray;
 }
